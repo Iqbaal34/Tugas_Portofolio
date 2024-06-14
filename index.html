@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" type="text/css" href="style(progress).css">
+</head>
+<body>
+    <div class="container">
+        <section class="one">
+            <h1>Tentang Diri Saya</h1>
+            <br><br><img src="Gambar/image-removebg-preview (3).png">
+            <br><h2>Siapa sih Saya?</h2>
+            <h3>Nama Saya Iqbal Hilmi Wibowo, Saya Lahir di Kota Yogyakarta Pada Tanggal 19 Juli 2008. Saya Berkerja Sebagai Graphic Desainer Selama Kurang Lebih 5 Tahun, Saya Sering Menangani Client, Saya Melakukanya Dengan Baik</h3>
+        </section>
+        <section class="two">
+            <h1>Portofolio</h1>
+            <h2>Ini Adalah Contoh Hasil Desain Saya</h2>
+            <img class="sebaris" src="Gambar/Portofolio 1.webp" alt="Desain Aplikasi Gojek">
+            <img class="sebaris" src="Gambar/portofolio 2.webp" alt="Desain Aplikasi BIngkot">
+            <img class="sebaris" src="Gambar/portofolio 3.webp" alt="Desain Pesanan BIngkot">
+        </section>
+        <section class="three">
+            <h1>Contact Us</h1>
+            <div class="containerr">
+                <h2>Form Kontak</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nama">Name:</label>
+                        <input type="text" placeholder="Your Name here" id="nama" name="nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" placeholder="Your Email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Messages:</label>
+                        <textarea id="pesan" placeholder="Message here" name="pesan" required></textarea>
+                    </div>
+                    <button type="button" onclick="submitForm()">Kirim</button>
+                </form>
+                <div class="terkirim" id="terkirim" style="display:none;">Terkirim. Terima kasih!</div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function submitForm() {
+            showNotification();
+            clearForm();
+        }
+
+        function showNotification() {
+            var notification = document.getElementById('terkirim');
+            notification.style.display = 'block';
+            setTimeout(function() {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        function clearForm() {
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>
